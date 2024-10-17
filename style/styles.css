@@ -1,0 +1,128 @@
+/* style.css */
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87CEFA, #f0f8ff);
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .weather-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .weather-container img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .weather-details {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .temp {
+    font-size: 32px;
+    color: #FF4500;
+  }
+  
+  /* Loader styles */
+  .loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Prend toute la hauteur de la page */
+    text-align: center;
+  }
+  
+  .spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loader-container p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Prévisions météo */
+  .forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .forecast-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+  }
+  
+  .forecast-item img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .forecast-date {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .forecast-temp {
+    font-size: 20px;
+    color: #FF6347;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .weather-container, .forecast-item {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .weather-container {
+      width: 100%;
+    }
+  
+    .forecast-container {
+      flex-direction: column;
+    }
+  }
+  
